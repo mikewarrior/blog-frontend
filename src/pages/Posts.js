@@ -14,8 +14,8 @@ class Posts extends Component {
       this.setState({
         posts
       });
-    } catch (e) {
-      console.log(e);
+    } catch (error) {
+      console.log(error);
     }
   }
 
