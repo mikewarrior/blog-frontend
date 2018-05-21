@@ -9,6 +9,7 @@ import {
 import Posts from "../pages/Posts";
 import Search from "../pages/Search";
 import Create from "../pages/Create";
+import Update from "../pages/Update";
 
 
 class Main extends Component {
@@ -26,13 +27,14 @@ class Main extends Component {
                 <li><NavLink to="/posts">See all posts</NavLink></li>
                 <li><NavLink to="/search">Search for posts</NavLink></li>
                 <li><NavLink to="/create">Create a post</NavLink></li>
-                <li><a href="/update">Update a post</a></li>
+                <li><NavLink to="/update">Update a post</NavLink></li>
                 <li><a href="/delete">Delete a post</a></li>
               </ul>
               <div className="content">
                 <Route path="/posts" component={Posts}/>
                 <Route path="/search" component={Search}/>
                 <Route path="/create" component={Create}/>
+                <Route path="/update" component={Update}/>
               </div>
           </div>
         </HashRouter>

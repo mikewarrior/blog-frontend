@@ -1,21 +1,29 @@
 import React, { Component } from 'react';
 
 
-class CreateForm extends Component {
+class UpdateForm extends Component {
   
   constructor(props) {
      super(props);
       this.state = {
+        id: '',
         title: '',
         author: '',
         content: '',
         posts: []
       };
+      this.handleIdChange = this.handleIdChange.bind(this);
       this.handleTitleChange = this.handleTitleChange.bind(this);
       this.handleAuthorChange = this.handleAuthorChange.bind(this);
       this.handleContentChange = this.handleContentChange.bind(this);
       this.handleSubmit = this.handleSubmit.bind(this);
     }
+
+  handleIdChange(event) {
+    this.setState({
+      id: event.target.value
+    });
+  }
 
   handleTitleChange(event) {
     this.setState({
@@ -37,9 +45,10 @@ class CreateForm extends Component {
   async handleSubmit(event) {
     event.preventDefault();
     try{
-      const url = 'http://127.0.0.1:8000/posts/create';
+      const postId = this.state.id;
+      const url = 'http://127.0.0.1:8000/posts/' + postId + '/edit';
       const response = await fetch(url,{
-        method: 'POST',
+        method: 'PUT',
         headers: {
           'Content-Type': 'application/json'
         },
@@ -61,6 +70,12 @@ class CreateForm extends Component {
     return (
       <div className="form-div">
         <form name="blog_create" onSubmit={this.handleSubmit}>
+          <label>POST ID</label>
+          <input
+            value={this.state.id}  
+            onChange={this.handleIdChange}
+            id="idInput"
+            type="text"/>
           <label>Title</label>
           <input
             value={this.state.title}  
@@ -85,4 +100,4 @@ class CreateForm extends Component {
     );
     }
 }
-export default CreateForm;
+export default UpdateForm;
