@@ -22,7 +22,7 @@ To run this project you will need to do the following:
     npm install
 ```
 
-3.- Run the blog-api ``FIRST``
+3.- Run the blog-api ``FIRST``, see the README file to learn how to do it.
 
 4.- Run the blog-frontend, with the following command:
 
