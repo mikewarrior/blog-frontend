@@ -37,7 +37,7 @@ class SearchForm extends Component {
                 onChange={this.handleSearchChange}
                 id="searchInput"
                 type="text"/>
-              <input type="submit" id="searchButton" value="Search!" />
+              <input type="submit" id="searchButton" value="Search Post" />
             </form>
             <div>
               <h3>We found this posts</h3>

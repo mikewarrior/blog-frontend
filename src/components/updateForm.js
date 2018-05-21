@@ -69,7 +69,7 @@ class UpdateForm extends Component {
   render() {
     return (
       <div className="form-div">
-        <form name="blog_create" onSubmit={this.handleSubmit}>
+        <form name="blog_update" onSubmit={this.handleSubmit}>
           <label>POST ID</label>
           <input
             value={this.state.id}  
@@ -94,7 +94,7 @@ class UpdateForm extends Component {
             onChange={this.handleContentChange}
             id="contentInput"
             type="textarea"/>
-          <input type="submit" id="createButton" value="Add New Post"/>
+          <input type="submit" id="createButton" value="Update Post"/>
         </form>
       </div>
     );

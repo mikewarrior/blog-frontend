@@ -8,8 +8,7 @@ class CreateForm extends Component {
       this.state = {
         title: '',
         author: '',
-        content: '',
-        posts: []
+        content: ''
       };
       this.handleTitleChange = this.handleTitleChange.bind(this);
       this.handleAuthorChange = this.handleAuthorChange.bind(this);

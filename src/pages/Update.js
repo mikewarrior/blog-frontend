@@ -7,7 +7,7 @@ class Update extends Component {
   render () {
     return (
       <div>
-        <h1>CUpdate a post</h1>
+        <h1>Update a post</h1>
         <UpdateForm></UpdateForm>
       </div>
     );
