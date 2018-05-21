@@ -1,13 +1,13 @@
 import React, { Component } from "react";
-import logo from './logo.svg';
-import './App.css';
+import logo from '../images/logo.svg';
+import '../css/App.css';
 import {
   Route,
   NavLink,
   HashRouter
 } from "react-router-dom";
-import Posts from "./Posts";
-import Search from "./Search";
+import Posts from "../pages/Posts";
+import Search from "../pages/Search";
  
 class Main extends Component {
   render() {
